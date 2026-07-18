@@ -1,0 +1,126 @@
+@import "tailwindcss";
+
+:root {
+  --background: #08090d;
+  --foreground: #f8f5ea;
+  --surface: #151820;
+  --surface-soft: #202532;
+  --muted: #242a36;
+  --primary: #ffe45e;
+  --primary-foreground: #090a0f;
+  --blue: #39a0ff;
+  --pink: #ff7a3d;
+  --green: #a7f43d;
+  --black: #f8f5ea;
+  --shadow: #000000;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-surface: var(--surface);
+  --color-surface-soft: var(--surface-soft);
+  --color-muted: var(--muted);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-accent-blue: var(--blue);
+  --color-accent-pink: var(--pink);
+  --color-accent-green: var(--green);
+  --color-ink: var(--black);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 92px;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  overflow-x: hidden;
+  text-rendering: optimizeLegibility;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  background-image:
+    linear-gradient(rgba(248, 245, 234, 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(248, 245, 234, 0.055) 1px, transparent 1px);
+  background-size: 44px 44px;
+  pointer-events: none;
+}
+
+button,
+a {
+  touch-action: manipulation;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  body {
+    cursor: crosshair;
+  }
+
+  a,
+  button {
+    cursor: pointer;
+  }
+}
+
+::selection {
+  background: var(--primary);
+  color: var(--primary-foreground);
+}
+
+@layer utilities {
+  .brutal-border {
+    @apply rounded-[1.1rem] border-[3px] border-ink;
+  }
+
+  .brutal-shadow {
+    @apply shadow-[6px_6px_0_var(--shadow)];
+  }
+
+  .brutal-shadow-lg {
+    @apply shadow-[10px_10px_0_var(--shadow)];
+  }
+
+  .brutal-card {
+    @apply rounded-[1.35rem] border-[3px] border-ink bg-surface shadow-[6px_6px_0_var(--shadow)];
+  }
+
+  .section-shell {
+    @apply mx-auto w-full max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-28;
+  }
+
+  .section-title {
+    @apply max-w-4xl text-4xl font-black leading-[0.98] tracking-normal text-foreground sm:text-5xl lg:text-7xl;
+  }
+
+  .focus-brutal {
+    @apply focus-visible:outline focus-visible:outline-3 focus-visible:outline-offset-4 focus-visible:outline-accent-blue;
+  }
+
+  .soft-panel {
+    @apply rounded-[1.75rem] border-[3px] border-ink bg-surface/95 shadow-[8px_8px_0_var(--shadow)];
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
