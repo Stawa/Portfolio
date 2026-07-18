@@ -136,14 +136,6 @@ export function Projects() {
           {projects.map((project, index) => {
             const accent = project.accent ?? accents[index % accents.length];
             const tech = project.topics;
-            console.log(
-              "Project Name:",
-              project.title,
-              "Tech Stack:",
-              tech,
-              "Archived:",
-              project.archived,
-            );
 
             return (
               <motion.article

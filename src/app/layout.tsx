@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
   display: "swap",
 });
 
-const webUrl = "https://your-domain.com";
+const webUrl = "https://swarupa-damodara.vercel.app";
 
 export const metadata: Metadata = {
   metadataBase: new URL(webUrl),
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   },
   applicationName: "Damodara",
   description:
-    "Bold. Functional. No fluff. Portfolio of I Komang Swarupa Damodara featuring software engineering, open-source projects, and experimental web experiences.",
+    "Personal portfolio of I Komang Swarupa Damodara, showcasing projects, open-source work, and a passion for turning ideas into software.",
   keywords: [
     "Damodara",
     "Portfolio",
@@ -69,7 +69,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Damodara — Software Developer",
     description:
-      "Building bold interfaces, reliable software, and open-source projects.",
+      "Turning ideas into software through web, desktop, mobile, and IoT projects",
     images: ["/og.png"],
     creator: "@damodara_2008",
   },

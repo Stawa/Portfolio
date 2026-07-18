@@ -1,4 +1,4 @@
-import { ArrowUpRight, Download, Mail } from "lucide-react";
+import { Download, Mail } from "lucide-react";
 import { siGithub, siX } from "simple-icons";
 import type { SimpleIcon } from "simple-icons";
 
@@ -82,7 +82,7 @@ export function Footer() {
             </a>
 
             <a
-              href="/resume.pdf"
+              href="/CV.pdf"
               download
               className="inline-flex items-center gap-2 font-black uppercase underline decoration-accent-blue decoration-[3px] underline-offset-4 transition-colors hover:text-primary"
             >
