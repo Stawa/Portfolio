@@ -19,7 +19,7 @@ export function IntroGate({ shouldShow }: IntroGateProps) {
 
     let frame: number;
 
-    const duration = prefersReducedMotion ? 100 : 3000;
+    const duration = prefersReducedMotion ? 500 : 2000;
     const start = performance.now();
 
     const update = (time: number) => {

@@ -74,7 +74,7 @@ export function Footer() {
 
           <div className="mt-10 flex flex-wrap gap-x-8 gap-y-4 border-t-[3px] border-ink pt-6">
             <a
-              href="mailto:hello@example.com"
+              href="mailto:damodaraswarupa@gmail.com"
               className="inline-flex items-center gap-2 font-black uppercase underline decoration-primary decoration-[3px] underline-offset-4 transition-colors hover:text-primary"
             >
               <Mail className="h-4 w-4" />
