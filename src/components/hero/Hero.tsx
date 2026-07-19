@@ -114,6 +114,7 @@ export function Hero() {
               alt="Swarupa Damodara"
               fill
               priority
+              sizes="(max-width: 768px) 80vw, 320px"
               className="object-cover"
             />
           </div>

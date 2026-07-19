@@ -10,7 +10,7 @@ import {
 
 export function Achievements() {
   return (
-    <MotionSection id="skills" className="section-shell">
+    <MotionSection id="achievements" className="section-shell">
       <div className="flex flex-col gap-4">
         <div className="mb-12 flex items-center gap-5">
           <div className="relative shrink-0">

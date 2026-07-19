@@ -51,9 +51,7 @@ export function About() {
           variants={itemVariants}
           className="mt-4 max-w-5xl text-5xl font-black leading-[0.9] md:text-7xl xl:text-8xl"
         >
-          Building technology
-          <br />
-          beyond the screen.
+          Who I am
         </motion.h2>
 
         <motion.div

@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     url: webUrl,
     title: "Damodara — Software Developer",
     description:
-      "Building bold interfaces, reliable software, and open-source projects.",
+      "Turning ideas into software through web, desktop, mobile, and IoT projects.",
 
     siteName: "Damodara",
     images: [
@@ -69,7 +69,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Damodara — Software Developer",
     description:
-      "Turning ideas into software through web, desktop, mobile, and IoT projects",
+      "Turning ideas into software through web, desktop, mobile, and IoT projects.",
     images: ["/og.png"],
     creator: "@damodara_2008",
   },

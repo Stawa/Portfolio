@@ -1,12 +1,4 @@
-import type { Achievement, SkillGroup, TimelineItem } from "@/types/portfolio";
-
-export const navItems = [
-  { label: "Home", href: "#home" },
-  { label: "Projects", href: "#projects" },
-  { label: "About", href: "#about" },
-  { label: "Skills", href: "#skills" },
-  { label: "Contact", href: "#contact" },
-];
+import type { Achievement, SkillGroup } from "@/types/portfolio";
 
 export const skillGroups: SkillGroup[] = [
   {
@@ -38,37 +30,6 @@ export const skillGroups: SkillGroup[] = [
     title: "Tools",
     skills: ["Git", "Figma", "Linux", "Docker", "Vercel"],
     accent: "yellow",
-  },
-];
-
-export const timeline: TimelineItem[] = [
-  {
-    period: "School",
-    title: "Built the fundamentals",
-    description:
-      "Sharpened problem solving through class projects, programming practice, and independent experiments.",
-    accent: "yellow",
-  },
-  {
-    period: "Competitions",
-    title: "Turned pressure into process",
-    description:
-      "Practiced building quickly, presenting clearly, and improving from feedback after every round.",
-    accent: "pink",
-  },
-  {
-    period: "Projects",
-    title: "Shipped practical apps",
-    description:
-      "Created web, mobile, and desktop projects with a focus on useful interfaces and maintainable code.",
-    accent: "blue",
-  },
-  {
-    period: "Achievements",
-    title: "Kept raising the bar",
-    description:
-      "Collected awards, certificates, and lessons that helped shape a stronger engineering mindset.",
-    accent: "green",
   },
 ];
 

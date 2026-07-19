@@ -2,12 +2,13 @@
 
 import { AnimatePresence, motion, useScroll } from "framer-motion";
 import { useEffect, useState } from "react";
-import { navItems } from "@/lib/portfolio-data";
 
 const sections = [
   { id: "home", label: "Home" },
   { id: "about", label: "About" },
   { id: "projects", label: "Projects" },
+  { id: "skills", label: "Skills" },
+  { id: "achievements", label: "Achievements" },
   { id: "footer", label: "Contact" },
 ];
 
@@ -16,6 +17,23 @@ export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [active, setActive] = useState("home");
   const { scrollY } = useScroll();
+
+  const handleMobileNavClick = (
+    event: React.MouseEvent<HTMLAnchorElement>,
+    id: string,
+  ) => {
+    event.preventDefault();
+    setOpen(false);
+    setTimeout(() => {
+      const element = document.getElementById(id);
+      if (!element) return;
+      element.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+      window.history.replaceState(null, "", `#${id}`);
+    }, 250);
+  };
 
   useEffect(() => {
     return scrollY.on("change", (latest) => setScrolled(latest > 24));
@@ -28,7 +46,10 @@ export function Navbar() {
 
     const observer = new IntersectionObserver(
       (entries) => {
-        const visible = entries.find((entry) => entry.isIntersecting);
+        const visible = entries
+          .filter((entry) => entry.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+
         if (visible) {
           setActive(visible.target.id);
         }
@@ -121,16 +142,16 @@ export function Navbar() {
               transition={{ duration: 0.22, ease: [0.22, 1, 0.36, 1] }}
             >
               <div className="grid gap-1 px-5 py-4 sm:px-7">
-                {navItems.map((item) => (
+                {sections.map((item) => (
                   <a
-                    key={item.href}
-                    href={item.href}
+                    key={item.id}
+                    href={`#${item.id}`}
                     className={`focus-brutal rounded-lg px-3 py-3 text-sm font-black uppercase transition-colors ${
-                      active === item.href.slice(1)
+                      active === item.id
                         ? "bg-primary text-primary-foreground"
                         : "text-foreground/80 hover:bg-muted hover:text-foreground"
                     }`}
-                    onClick={() => setOpen(false)}
+                    onClick={(event) => handleMobileNavClick(event, item.id)}
                   >
                     {item.label}
                   </a>
