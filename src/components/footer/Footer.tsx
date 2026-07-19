@@ -31,17 +31,17 @@ const iconLinkedIn = (
 const socialLinks = [
   {
     label: "GitHub",
-    href: "https://github.com/",
+    href: "https://github.com/Stawa",
     icon: <SimpleIcon icon={siGithub} />,
   },
   {
     label: "LinkedIn",
-    href: "https://www.linkedin.com/",
+    href: "https://www.linkedin.com/in/swarupa-damodara/",
     icon: iconLinkedIn,
   },
   {
     label: "X",
-    href: "https://x.com/",
+    href: "https://x.com/damodara_2008",
     icon: <SimpleIcon icon={siX} />,
   },
 ];

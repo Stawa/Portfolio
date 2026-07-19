@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { Archive, ArrowUpRight, Lock } from "lucide-react";
+import { Archive, Lock, SquareArrowOutUpRight } from "lucide-react";
 import { siGithub } from "simple-icons";
 
 import { BrutalButton } from "@/components/ui/BrutalButton";
@@ -208,8 +208,8 @@ export function Projects() {
                       href={project.demo}
                       target="_blank"
                       rel="noreferrer"
-                      icon={<ArrowUpRight className="h-4 w-4" />}
-                      variant={accent === "white" ? "yellow" : accent}
+                      icon={<SquareArrowOutUpRight className="h-4 w-4" />}
+                      variant="green"
                       className="flex-1 justify-center"
                     >
                       Demo
