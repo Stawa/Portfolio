@@ -3,57 +3,37 @@ import type { Achievement, SkillGroup } from "@/types/portfolio";
 export const skillGroups: SkillGroup[] = [
   {
     title: "Frontend",
-    skills: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Framer Motion"],
+    skills: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
+    description: "Building responsive and interactive user interfaces.",
     accent: "yellow",
   },
   {
     title: "Backend",
-    skills: ["Node.js", "Express", "REST APIs", "PostgreSQL", "Prisma"],
+    skills: ["Node.js", "Bun", "REST APIs", "Python"],
+    description: "Developing server-side applications and APIs.",
     accent: "blue",
   },
   {
-    title: "Mobile",
-    skills: ["React Native", "Expo", "Android", "Responsive UI"],
+    title: "Hardware & IoT",
+    skills: ["Arduino", "Raspberry Pi", "ESP32", "Sensors"],
+    description: "Creating embedded systems and IoT solutions.",
     accent: "pink",
-  },
-  {
-    title: "Desktop",
-    skills: ["Electron", "Tauri", "Local-first Apps"],
-    accent: "green",
-  },
-  {
-    title: "Languages",
-    skills: ["JavaScript", "TypeScript", "Python", "Java", "SQL"],
-    accent: "white",
-  },
-  {
-    title: "Tools",
-    skills: ["Git", "Figma", "Linux", "Docker", "Vercel"],
-    accent: "yellow",
   },
 ];
 
 export const achievements: Achievement[] = [
   {
-    title: "Competition Finalist",
+    title: "Indonesia Investors Day",
     description:
-      "Recognized for building a polished technical solution and communicating the product clearly.",
-    label: "Competitions",
+      "Received the Silver Medal in the Information, Communication, and Technology category for developing V.E.R.A (Virtual Entity for Responsive Assistant). V.E.R.A is an AI-powered virtual assistant designed to enhance user experience and streamline communication.",
+    label: "International Innovation Competition",
     accent: "yellow",
-  },
-  {
-    title: "Project Awards",
-    description:
-      "Earned recognition for practical software ideas, UI craft, and consistent execution.",
-    label: "Awards",
-    accent: "blue",
-  },
-  {
-    title: "Learning Certificates",
-    description:
-      "Completed courses across frontend development, backend fundamentals, and modern tooling.",
-    label: "Certificates",
-    accent: "pink",
+    projectUrl: "https://github.com/Stawa/GTTS",
+    year: 2024,
+    award: "Silver Medal",
+    category: "ICT",
+    icon: "IID.webp",
+    competitionUrl: "https://iid-official.com/elementor-3108/",
   },
 ];
 

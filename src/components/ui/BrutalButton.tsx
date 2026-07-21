@@ -70,9 +70,7 @@ export function BrutalButton({
       `}
       {...props}
     >
-      {/* subtle shine */}
       <span className="absolute inset-0 -translate-x-full bg-white/15 transition-transform duration-500 group-hover:translate-x-full" />
-
       <span className="relative z-10 flex items-center gap-2">
         {icon}
         {children}

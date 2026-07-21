@@ -99,7 +99,7 @@ export function Projects() {
         </div>
 
         <h2 className="section-title">
-          A collection of software I&apos;ve built.
+          A collection of software I&apos;ve built
         </h2>
         <p className="text-lg leading-8 text-foreground/80">
           There are many projects I have worked on, some of them are open-source

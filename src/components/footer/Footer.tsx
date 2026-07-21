@@ -50,7 +50,7 @@ export function Footer() {
   return (
     <footer
       id="footer"
-      className="border-t-[3px] border-ink bg-background text-foreground"
+      className="border-t-[3px] border-ink bg-background text-foreground select-none"
     >
       <div className="mx-auto w-full max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
         <div className="relative overflow-hidden rounded-[2rem] border-[3px] border-ink bg-surface p-6 shadow-[10px_10px_0_var(--shadow)] sm:p-8 lg:p-12">
@@ -84,18 +84,24 @@ export function Footer() {
             <a
               href="/CV.pdf"
               download
-              className="inline-flex items-center gap-2 font-black uppercase underline decoration-accent-blue decoration-[3px] underline-offset-4 transition-colors hover:text-primary"
+              className="inline-flex items-center gap-2 transition-colors hover:text-primary"
             >
               <Download className="h-4 w-4" />
-              Download CV
+
+              <span className="font-black uppercase underline decoration-accent-blue decoration-[3px] underline-offset-4">
+                Download CV
+              </span>
+
+              <span className="font-mono text-sm font-semibold text-foreground/60">
+                • Updated 17 Jul 2026
+              </span>
             </a>
           </div>
         </div>
 
         <div className="mt-10 grid gap-8 border-t-[3px] border-b-[3px] border-ink pt-8 pb-8 lg:grid-cols-[1.2fr_1fr] lg:items-start">
           <div className="font-mono text-sm lg:text-start sm:text-center font-black uppercase text-foreground/70">
-            &copy; Copyright 2026 Swarupa Damodara. Built with Next.js +
-            TypeScript.
+            &copy; Copyright 2026 Swarupa Damodara - All rights reserved.
           </div>
           <div className="flex flex-wrap gap-4 lg:justify-end sm:justify-center">
             {socialLinks.map((link) => (

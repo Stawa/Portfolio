@@ -8,9 +8,8 @@ export function Hero() {
   return (
     <section
       id="home"
-      className="section-shell grid min-h-[calc(100svh-6rem)] items-center gap-16 pt-10 lg:grid-cols-[1.1fr_0.9fr]"
+      className="select-none section-shell grid min-h-[calc(100svh-6rem)] items-center gap-16 pt-10 lg:grid-cols-[1.1fr_0.9fr]"
     >
-      {/* LEFT */}
       <div>
         <motion.h1
           className="mt-7 text-6xl font-black leading-[0.9] sm:text-7xl md:text-8xl xl:text-9xl"
@@ -50,14 +49,12 @@ export function Hero() {
         </motion.div>
       </div>
 
-      {/* RIGHT */}
       <motion.div
         initial={{ opacity: 0, scale: 0.92 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ delay: 0.2, duration: 0.6 }}
         className="relative mx-auto flex aspect-square w-full max-w-lg items-center justify-center"
       >
-        {/* rotating decoration */}
         <motion.div
           className="absolute inset-0 rounded-[40px] border-4 border-black bg-accent-yellow"
           animate={{ rotate: [0, 3, -3, 0] }}
@@ -68,7 +65,6 @@ export function Hero() {
           }}
         />
 
-        {/* blue block */}
         <motion.div
           className="absolute -right-6 -top-6 h-40 w-40 brutal-border bg-accent-blue shadow-[8px_8px_0_var(--black)]"
           animate={{
@@ -82,7 +78,6 @@ export function Hero() {
           }}
         />
 
-        {/* pink block */}
         <motion.div
           className="absolute -bottom-5 -left-5 h-28 w-28 brutal-border bg-accent-pink shadow-[8px_8px_0_var(--black)]"
           animate={{
@@ -96,7 +91,6 @@ export function Hero() {
           }}
         />
 
-        {/* profile card */}
         <motion.div
           whileHover={{
             rotate: -2,

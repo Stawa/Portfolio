@@ -6,7 +6,6 @@ import {
   itemVariants,
   staggerContainer,
 } from "@/components/ui/MotionSection";
-import { Info } from "lucide-react";
 
 export function About() {
   return (
@@ -17,9 +16,7 @@ export function About() {
         whileInView="visible"
         viewport={{ once: true, amount: 0.2 }}
       >
-        {/* Heading */}
         <div className="mb-12 flex items-center gap-5">
-          {/* Number */}
           <div className="relative shrink-0">
             <div className="absolute inset-0 translate-x-1.5 translate-y-1.5 rounded-md bg-foreground" />
 
@@ -29,16 +26,12 @@ export function About() {
               </span>
             </div>
           </div>
-          {/* Divider */}
           <div className="relative h-[3px] flex-1 bg-foreground">
             <div className="absolute left-1/2 top-1/2 h-6 w-6 -translate-x-1/2 -translate-y-1/2 rotate-45 rounded-[2px] border-[3px] border-foreground bg-accent-pink" />
-
             <div className="absolute left-1/2 top-1/2 h-2.5 w-2.5 -translate-x-1/2 -translate-y-1/2 rotate-45 bg-foreground" />
           </div>
-          {/* Label */}
           <div className="relative shrink-0">
             <div className="absolute inset-0 translate-x-1.5 translate-y-1.5 rounded-md bg-foreground" />
-
             <div className="relative rounded-md border-[3px] border-foreground bg-surface px-5 py-2">
               <span className="text-xs font-black uppercase tracking-[0.28em] text-foreground">
                 About
@@ -82,34 +75,28 @@ export function About() {
               During senior high school, I expanded into
               <span className="font-semibold text-foreground">
                 {" "}
-                Android development
+                Backend development
               </span>
-              ,<span className="font-semibold text-foreground"> IoT</span>, and
+              ,{" "}
               <span className="font-semibold text-foreground">
                 {" "}
-                Minecraft Java plugins
+                API development
               </span>
-              , discovering that I enjoyed building things as much as learning
-              how they worked.
+              , and <span className="font-semibold text-foreground">
+                {" "}
+                IoT
+              </span>{" "}
+              discovering that I enjoyed building things as much as learning how
+              they worked.
             </p>
           </div>
 
-          <div className="rounded-lg border-l-8 border-blue-600 bg-blue-50 p-5 dark:bg-blue-950/20">
-            <div className="flex items-start gap-3">
-              <Info className="mt-0.5 h-5 w-5 shrink-0 text-blue-600" />
-
-              <div>
-                <p className="font-bold text-blue-700 dark:text-blue-400">
-                  Note
-                </p>
-
-                <p className="mt-1 text-foreground/80">
-                  This may sounds like a lot, but honestly, I&apos;m not a
-                  master of all these technologies. I may forget some syntax, or
-                  struggle with certain concepts.
-                </p>
-              </div>
-            </div>
+          <div className="mt-8 border-l-[4px] border-foreground pl-6">
+            <blockquote className="mt-4 italic leading-7 font-semibold text-foreground">
+              This may sounds like a lot, but honestly, I&apos;m not a master of
+              all these technologies. I may forget some syntax, or struggle with
+              certain concepts.
+            </blockquote>
           </div>
         </motion.div>
       </motion.div>

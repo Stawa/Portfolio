@@ -16,13 +16,7 @@ export type SkillGroup = {
   title: string;
   skills: string[];
   accent: Accent;
-};
-
-export type TimelineItem = {
-  period: string;
-  title: string;
   description: string;
-  accent: Accent;
 };
 
 export type Achievement = {
@@ -30,4 +24,10 @@ export type Achievement = {
   description: string;
   label: string;
   accent: Accent;
+  icon?: string;
+  projectUrl?: string;
+  year?: number;
+  award?: string;
+  category?: string;
+  competitionUrl?: string;
 };
